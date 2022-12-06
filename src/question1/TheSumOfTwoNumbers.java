@@ -5,6 +5,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class TheSumOfTwoNumbers {
+    /**
+     * 暴力枚举
+     * 利用循环遍历寻找结果
+     * 注意第二次循环要从 j = i + 1 开始
+     * 时间复杂度 O(n*n)  n 是数组中的元素数量
+     * 空间复杂度 O(1)
+     */
     public static int[] one(int[] nums, int target) {
         for (int i = 0; i < nums.length; i++) {
             int n = target - nums[i];
@@ -17,6 +24,15 @@ public class TheSumOfTwoNumbers {
         return null;
     }
 
+    /**
+     * 哈希表
+     * 将数组中的值按照
+     * key: target - num 与目标的差值
+     * value: index num的下标
+     * 方式存入哈希表中，直到遍历到哈希表中存在的差值
+     * 时间复杂度 O(n) n是数组中的元素数量
+     * 空间复杂度 O(n) n是数组中的元素数量
+     */
     public static int[] two(int[] nums, int target) {
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {

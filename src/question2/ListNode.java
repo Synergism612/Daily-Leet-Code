@@ -1,5 +1,8 @@
 package question2;
 
+/**
+ * 链表节点类
+ */
 public class ListNode {
     int val;
     ListNode next;
