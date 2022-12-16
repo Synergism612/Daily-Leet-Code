@@ -3,7 +3,8 @@ package question14;
 public class LongestCommonPrefix {
 
     /**
-     *
+     * 自写
+     * 整体从左开始检查前缀
      */
     public static String one(String[] strs) {
         int min = strs[0].length();
