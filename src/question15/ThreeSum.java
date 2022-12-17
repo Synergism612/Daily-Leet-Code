@@ -70,8 +70,9 @@ public class ThreeSum {
                 while (nums[i] + nums[j] + nums[k] > 0 && j < k) {
                     k--;
                 }
-                if (j == k)
+                if (j == k) {
                     break;
+                }
                 // 如果满足条件的话
                 if (nums[i] + nums[j] + nums[k] == 0) {
                     List<Integer> list = new ArrayList<>();
@@ -79,8 +80,12 @@ public class ThreeSum {
                     list.add(nums[j]);
                     list.add(nums[k]);
                     result.add(list);
-                    while ((j < k) && nums[j] == nums[++j]) ;
-                    while (j < k && nums[k] == nums[--k]) ;
+                    while ((j < k) && nums[j] == nums[++j]){
+                        System.out.println("跳过重复");
+                    }
+                    while (j < k && nums[k] == nums[--k]){
+                        System.out.println("跳过重复");
+                    }
                 }
             }
         }
