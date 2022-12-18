@@ -4,7 +4,7 @@ public class IntToRoman {
 
     /**
      * 想从小到大处理
-     * 不有点麻烦了
+     * 有点麻烦了
      */
     public static String one(int num) {
         StringBuilder result = new StringBuilder();
