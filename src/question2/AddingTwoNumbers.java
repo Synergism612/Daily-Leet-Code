@@ -1,5 +1,7 @@
 package question2;
 
+import utils.ListNode;
+
 public class AddingTwoNumbers {
     /**
      * 迭代解法
@@ -111,24 +113,10 @@ public class AddingTwoNumbers {
     }
 
     public static void main(String[] args) {
-        ListNode l1 = new ListNode(9, new ListNode(9, new ListNode(6)));
-        ListNode l2 = new ListNode(5, new ListNode(6, new ListNode(4, new ListNode(9))));
-        out(one(l1, l2));
-        out(two(l1, l2));
-        out(three(l1, l2));
-    }
-
-    /**
-     * 链表输出方法
-     *
-     * @param head 链表头部节点
-     */
-    public static void out(ListNode head) {
-        System.out.print(head.val + " ");
-        if (head.next == null) {
-            System.out.println(">");
-            return;
-        }
-        out(head.next);
+        ListNode l1 = ListNode.value(new int[]{9,9,6});
+        ListNode l2 = ListNode.value(new int[]{5,6,4,9});
+        one(l1, l2).println();
+        two(l1, l2).println();
+        three(l1, l2).println();
     }
 }

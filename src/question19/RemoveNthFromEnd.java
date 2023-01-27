@@ -1,5 +1,7 @@
 package question19;
 
+import utils.ListNode;
+
 public class RemoveNthFromEnd {
 
     /**
