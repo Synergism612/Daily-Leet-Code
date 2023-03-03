@@ -56,7 +56,7 @@ public class Divide {
     }
 
     public static void main(String[] args) {
-        System.out.println(one(2147483647,2));
+        System.out.println(one(2147483647, 2));
     }
 
 }
