@@ -2,6 +2,9 @@ package question32;
 
 public class LongestValidParentheses {
 
+  /**
+   * 40ms
+   */
   public static int one(String s) {
     int[] information = new int[s.length()];
     char[] charArray = s.toCharArray();
@@ -26,6 +29,10 @@ public class LongestValidParentheses {
     return max;
   }
 
+  /**
+   * 看来以后需要少使用s.toCharArray()函数了，该函数很费时间
+   * 1ms
+   */
   public static int two(String s) {
     int[] information = new int[s.length()];
     int max = 0;
